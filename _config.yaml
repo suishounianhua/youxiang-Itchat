@@ -49,13 +49,8 @@ group_helper_conf:
 
   # 白名单用户。当 is_all：False。只处理这个群里的消息
   group_name_white_list:
-    - '淘宝天猫内部优惠群-综合类①'
-    - '淘宝内部优惠群-潮流范①'
-    - '淘宝内部优惠群-零食类①'
-    - '淘宝内部优惠群-女装类①'
-    - '口碑KFC必胜客麦当劳优惠券'
-    - '京东内部优惠群-9.9专区①'
-    - '拼多多内部优惠群①'
+    - '猫咪咕噜可爱多@禁言'
+  
 
   # 黑名单用户。当 is_all ：True 。这个群里的用户不受影响。
   group_name_black_list:
@@ -76,15 +71,11 @@ group_helper_conf:
 
 taobao:
   is_open: True
-  app_key: ''
-  app_secret: ''
-  adzone_id: ''
+  app_key: '33182905'
+  app_secret: '7dd7ad2ed0acfe173b1d74a1b9948f77'
+  adzone_id: '111724000127' 
   chat_groups:
-    - {group_name: '淘宝天猫内部优惠群-综合类①', group_material_id: '3756,28026,27446,13366,3786', minute: '15,45', hour: '7-23'}
-    - {group_name: '淘宝内部优惠群-潮流范①', group_material_id: '4093', minute: '20', hour: '7-23'}
-    - {group_name: '口碑KFC必胜客麦当劳优惠券', group_material_id: '19810', minute: '30', hour: '7-23'}
-    - {group_name: '淘宝内部优惠群-女装类①', group_material_id: '3767,27448,13367,3788', minute: '10,40', hour: '7-23'}
-    - {group_name: '淘宝内部优惠群-零食类①', group_material_id: '13375,3761,27451,3791', minute: '10,40', hour: '7-23'}
+    - {group_name: '猫咪咕噜可爱多@禁言', group_material_id: '3756,28026,27446,13366,3786', minute: '5,15,30,45,50,55', hour: '7-23'}
 
 jingdong:
   is_open: False
@@ -96,7 +87,7 @@ jingdong:
     - {group_name: '京东内部优惠群-9.9专区①', group_material_id: '10', minute: '10,40', hour: '7-23'}
 
 pinduoduo:
-  is_open: True
+  is_open: False
   app_key: ''
   app_secret: ''
   p_id: ''
