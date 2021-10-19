@@ -14,6 +14,7 @@ def tb_share_text(group_name: str, material_id: str, app_key, app_secret, adzone
     '''
     try:
         material_id = str(random.choices(material_id.split(','))[0])
+        item_id =  str(random.choices(item_id.split(','))[0])
         print(material_id)
         groups = itchat.search_chatrooms(name=f'''{group_name}''')
         for room in groups:
