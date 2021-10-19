@@ -57,7 +57,7 @@ class TbApiClient(object):
         return strParam
 
     #高效API调用示例
-    def taobao_tbk_dg_optimus_material(self, material_id: str):
+    def taobao_tbk_dg_optimus_material(self, material_id: str,item_id: str):
         '''
         通用物料推荐，传入官方公布的物料id，可获取指定物料
         淘宝接口文档：
@@ -82,6 +82,9 @@ class TbApiClient(object):
                     'material_id': material_id,
                     'method': 'taobao.tbk.dg.optimus.material'
                     }
+        if item_id != '0':
+            postparm['item_id'] = item_id
+
         # 公共参数，一般不需要修改
         paramArr = {'app_key': self.app_key,
                     'v': '2.0',

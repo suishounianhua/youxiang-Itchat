@@ -5,7 +5,7 @@ import random
 from untils.common import save_pic, del_pic
 from untils.tb_top_api import TbApiClient
 
-def tb_share_text(group_name: str, material_id: str, app_key, app_secret, adzone_id):
+def tb_share_text(group_name: str, material_id: str, app_key, app_secret, adzone_id,item_id: str):
     '''
 
     :param group_name:
@@ -20,14 +20,13 @@ def tb_share_text(group_name: str, material_id: str, app_key, app_secret, adzone
             group_name = room['UserName']
             time.sleep(random.randint(1, 5))
             tb_client = TbApiClient(app_key=app_key, secret_key=app_secret, adzone_id=adzone_id)
-            res = tb_client.taobao_tbk_dg_optimus_material(material_id)
+            res = tb_client.taobao_tbk_dg_optimus_material(material_id,str(item_id))
             json_data = json.loads(res)['tbk_dg_optimus_material_response']['result_list']['map_data']
             count = 0
             for item in json_data:
                 count += 1
-                if(count>=2){
+                if count >= 2:
                     break;
-                }
                 coupon_amount = 0
                 coupon_share_url = ""
                 title = ""

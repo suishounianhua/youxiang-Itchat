@@ -34,12 +34,13 @@ def tb_job_tasks(scheduler):
     app_secret = conf.get('app_secret')
     adzone_id = conf.get('adzone_id')
 
+
     chat_groups = conf.get('chat_groups')
     for chat_group in chat_groups:
         print(chat_group['group_name'])
         scheduler.add_job(func=tb_share_text,
                           kwargs={'group_name': chat_group['group_name'], 'material_id': chat_group['group_material_id'],
-                                  'app_key': app_key, 'app_secret': app_secret, 'adzone_id': adzone_id},
+                                  'app_key': app_key, 'app_secret': app_secret, 'adzone_id': adzone_id, 'item_id': 'item_id' in chat_group.keys() and chat_group['item_id'] or '0'},
                           trigger='cron', hour=f'''{chat_group['hour']}''', minute=f'''{chat_group['minute']}''', second=0,  jitter=300, id=f'''{chat_group['group_name']}''')
 def jd_job_task(scheduler):
 
