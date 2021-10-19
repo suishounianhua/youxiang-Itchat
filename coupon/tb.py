@@ -25,6 +25,9 @@ def tb_share_text(group_name: str, material_id: str, app_key, app_secret, adzone
             count = 0
             for item in json_data:
                 count += 1
+                if(count>=2){
+                    break;
+                }
                 coupon_amount = 0
                 coupon_share_url = ""
                 title = ""
