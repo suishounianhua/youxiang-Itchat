@@ -40,11 +40,13 @@ def tb_share_text(group_name: str, material_id: str, app_key, app_secret, adzone
                     itchat.send('@img@%s' % (f'''{filename}'''), group_name)
 
                     time.sleep(2)
-                    itchat.send(f'''{title}\n【在售价】¥{zk_final_price}\n【券后价】¥{round(float(zk_final_price) - float(coupon_amount), 2)}''', group_name)
-                    time.sleep(random.randint(1, 3))
                     text = f'''{tb_client.taobao_tbk_tpwd_create(title, coupon_share_url)}'''
                     start_index = text.find('￥')
-                    itchat.send(f'''({text[start_index: 13+start_index]})''', group_name)
+                    itchat.send(f'''{title}\n【当前】💰{zk_final_price}\n【劵后】💰{round(float(zk_final_price) - float(coupon_amount), 2)}\n({text[start_index: 13+start_index]})''', group_name)
+                    # time.sleep(random.randint(1, 3))
+                    # text = f'''{tb_client.taobao_tbk_tpwd_create(title, coupon_share_url)}'''
+                    # start_index = text.find('￥')
+                    # itchat.send(f'''({text[start_index: 13+start_index]})''', group_name)
                     time.sleep(2)
                     del_pic(filename)
                 else:
@@ -57,11 +59,13 @@ def tb_share_text(group_name: str, material_id: str, app_key, app_secret, adzone
                     filename = save_pic(pict_url, item_id)
                     itchat.send('@img@%s' % (f'''{filename}'''), group_name)
                     time.sleep(2)
-                    itchat.send(f'''{title}\n【在售价】¥{zk_final_price}\n【券后价】¥{round(float(zk_final_price) - float(coupon_amount), 2)}''', group_name)
-                    time.sleep(random.randint(1, 3))
                     text = f'''{tb_client.taobao_tbk_tpwd_create(title, coupon_share_url)}'''
                     start_index = text.find('￥')
-                    itchat.send(f'''({text[start_index: 13+start_index]})''', group_name)
+                    itchat.send(f'''{title}\n【当前】💰¥{zk_final_price}\n【劵后】💰{round(float(zk_final_price) - float(coupon_amount), 2)}\n({text[start_index: 13+start_index]})''', group_name)
+                    # time.sleep(random.randint(1, 3))
+                    # text = f'''{tb_client.taobao_tbk_tpwd_create(title, coupon_share_url)}'''
+                    # start_index = text.find('￥')
+                    # itchat.send(f'''({text[start_index: 13+start_index]})''', group_name)
                     time.sleep(2)
                     del_pic(filename)
                     time.sleep(2)
