@@ -62,7 +62,7 @@ group_helper_conf:
   enter_mult_group: False
 
   group_admin:
-    - '' ## 该微信聊天的管理员，管理发广告不被踢
+    - '' ## 该微信聊天的管理员，管理发广告不被踢      # - {group_name: '双十一冲冲冲', group_material_id: '4094,3756,13366,27446', minute: '10,18,28,36,45,57', hour: '7-23'}
 
 #--------------------------- 群聊助手设置 --------------------------end
 
@@ -75,8 +75,8 @@ taobao:
   app_secret: '7dd7ad2ed0acfe173b1d74a1b9948f77'
   adzone_id: '111724000127'
   chat_groups:
-    - {group_name: '猫咪咕噜可爱多@禁言', group_material_id: '13256', item_id:'45907188836',  minute: '10,18,28,36,45,57', hour: '7-23'}
-    - {group_name: '双十一冲冲冲', group_material_id: '4094,3756,13366,27446', minute: '10,18,28,36,45,57', hour: '7-23'}
+    - {group_name: '猫咪咕噜可爱多@禁言', group_material_id: '13256', item_id: '45907188836',  minute: '10,18,28,32,45,57', hour: '7-23'}
+
 
 jingdong:
   is_open: False

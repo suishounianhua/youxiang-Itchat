@@ -25,7 +25,7 @@ def tb_share_text(group_name: str, material_id: str, app_key, app_secret, adzone
             count = 0
             for item in json_data:
                 count += 1
-                if count >= 2:
+                if count >= 4:
                     break;
                 coupon_amount = 0
                 coupon_share_url = ""
@@ -74,7 +74,7 @@ def tb_share_text(group_name: str, material_id: str, app_key, app_secret, adzone
                     del_pic(filename)
     except Exception as e:
         print(e)
-        tb_share_text(group_name, material_id, app_key, app_secret, adzone_id)
+        tb_share_text(group_name, material_id, app_key, app_secret, adzone_id,item_id)
 
 
 if __name__ == '__main__':
